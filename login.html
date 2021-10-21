@@ -1,0 +1,47 @@
+<html>
+<head> 
+    <title> Login Page </title>
+    <link rel = "stylesheet" type = "text/css" href = "styles.css">  
+</head>
+    <body>
+        <div class="container">
+                            <!--Data or Content-->
+            <div class="box-1">
+                <div class="content-holder">
+                    <h2>Hello!</h2>
+                    <p>Don't have Account.... Signup Here!!</p>
+                    <form action="signup.html">
+                        <input type="submit" class="signup-button" value="Sign Up">
+                    </form> 
+                </div>
+            </div>
+    
+            
+            <div class="box-2">
+                <div class="login-form-container">
+                    <h1>Login Form</h1>
+                        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+                            <p>  
+                                <label> Username: </label>  
+                                <input type = "text,hidden" id ="username" name  = "username" class="input-field"/>  
+                            </p> <br><br>
+                            <p>  
+                                <label> Password : </label>  
+                                <input type = "password,hidden" id ="passname" name  = "password" class="input-field"/>  
+                            </p> <br><br>
+                            <p>     
+                                <input type =  "submit" id = "btn" value = "Login" class="login-button" />  
+                            </p>  
+                        </form>  
+                </div>
+    
+    
+                    <!--Create Container for Signup form-->
+                <div class="signup-form-container">
+                    <h1>Sign Up Form</h1>
+                    <form name="f1" action = "signup.html" onsubmit = "return validation()" method = "POST"></form>
+                        <input type="submit" class="signup-button" value="signup"> Sign Up</button>
+                </div>
+            </div>
+    </body>
+</html>
