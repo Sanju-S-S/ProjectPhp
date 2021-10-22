@@ -7,11 +7,12 @@
         <div class="container">
                             <!--Data or Content-->
             <div class="box-1">
-                <div class="content-holder">
+                <div class="content-holder1">
                     <h2>Hello!</h2>
                     <p>Already Registered!! SignIn Here!!</p>
-                    <button class="button-1" onclick="signin()">Sign In</button>
-                    <button class="button-2" onclick="login()">Login</button>
+                    <form action="login.html">
+                        <input type="submit" class="signup-button" value="Login">
+                    </form> 
                 </div>
             </div>
     
@@ -20,11 +21,33 @@
             <div class="box-2">
                 <div class="login-form-container">
                     <h1>Registration Form</h1>
-                    <input type="text" placeholder="Name" class="input-field">
-                    <br><br>
-                    <input type="password" placeholder="Password" class="input-field">
-                    <br><br>
-                    <button class="login-button" type="button">Login</button>
+                        <form name="f1" action = "insert.php" onsubmit = "return validation()" method = "POST">  
+                            <table>
+                                <tr>
+                                    <label> Register Number: </label>  
+                                    <input type = "text,hidden" id ="registerno" name  = "registerno" class="input-field"/>  
+                                </tr> <br><br>
+                                <tr>  
+                                    <label> Name : </label>  
+                                    <input type = "text,hidden" id ="name" name  = "name" class="input-field"/>  
+                                </tr> <br><br>
+                                <tr>  
+                                    <label> Date of Birth: </label>  
+                                    <input type = "date" id ="dob" name  = "dob" class="input-field"/>  
+                                </tr> <br><br>
+                                <tr>  
+                                    <label> Email: </label>  
+                                    <input type = "text" id ="email" name  = "email" class="input-field"/>
+                                </tr> <br><br>
+                                <tr>  
+                                    <label> Address: </label>  
+                                    <input type = "text" id ="address" name  = "address" class="input-field"/>  
+                                </tr> <br><br>
+                                <p>     
+                                    <input type =  "submit" id = "btn" value = "Register" class="login-button" />  
+                                </p> <br><br>
+                            </table>
+                        </form>  
                 </div>
     
     
