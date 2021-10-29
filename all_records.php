@@ -2,16 +2,58 @@
 <html>
 <head>
   <title>All Records</title>
+  <style>
+            table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+            th {
+            text-align: center;
+            padding: 8px;
+            }
+
+            td {
+            text-align: center;
+            padding: 8px;
+            }
+
+            tr:nth-child(even){background-color: #f2f2f2}
+
+            th {
+            background-color: #55b18f;
+            color: white;
+            }
+
+            input{
+                display: inline-block;
+                -webkit-box-sizing: content-box;
+                -moz-box-sizing: content-box;
+                box-sizing: content-box;
+                padding: 8px 15px;
+                border: 2px solid #DEDEDE;
+                -webkit-border-radius: 8px;
+                border-radius: 8px;
+                font: normal 16px/normal "Times New Roman", Times, serif;
+                color: #000000;
+                -o-text-overflow: clip;
+                text-overflow: clip;
+                background: rgba(252,252,252,1);
+                -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.2) inset;
+                box-shadow: 0 0 0 0 rgba(0,0,0,0.2) inset;
+                text-shadow: 0 0 0 rgba(255,255,255,0.66) ;
+            }
+        </style>
 </head>
 <body>
 
 <center>
-    <h1>Welcome Admin</h1>
-    <h2>User Given Credentials</h2>
+    <h1>Welcome User</h1>
+    <h2>Daily Data Report</h2>
 
 <table border="2">
   <tr>
-    <td>Dater</td>
+    <td>Date</td>
     <td>Opening Balance</td>
     <td>Xerox Copy</td>
     <td>Xerox Amount</td>
@@ -84,11 +126,14 @@ while($data = mysqli_fetch_array($records))
     <td><?php echo $data['totvalue']; ?></td>
     <td><a href="edit_daily_entry.php?id=<?php echo $data['dates']; ?>">Edit</a></td>
     <td><a href="delete.php?id=<?php echo $data['dates']; ?>">Delete</a></td>
-  </tr>	
+  </tr>
 <?php
 }
 ?>
 </table>
+<br><br>
+<a href="index.php"> Back </a>	
+
 </center>
 
 </body>

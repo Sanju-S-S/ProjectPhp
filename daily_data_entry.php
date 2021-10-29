@@ -53,7 +53,7 @@
             <center>
                 <br>
 
-                <form name="f2" action="insert.php" action="insert.php"  onsubmit="return validation()" method="POST">
+                <form name="f2" action="insert.php" onsubmit="return validation()" method="POST">
                     <table>
                         <tr>
                             <td>Date: </td>
